@@ -202,52 +202,26 @@
     const img = f.querySelector("img"); img.style.left = (150 - x) + "px"; img.style.top = (150 - y) + "px";
   })();
 
-  /* ---------------- celebrations cards ---------------- */
+  /* ---------------- celebrations cards (real photos only; placeholders where no confirmed photo exists) ---------------- */
   (function () {
     const wrap = $("#cards"); if (!wrap) return;
     const data = [
       ["Weddings", "Հարսանիք", "01", "couple-garden.jpg", -6, 40, true],
-      ["Engagements", "Նշանադրություն", "02", "couple-red-stairs.jpg", -2, 8],
-      ["Birthdays", "Ծննդյան տոն", "03", "cake-gold.jpg", 2, 8],
-      ["Holy Baptism", "Սուրբ Մկրտություն", "04", "garden-arch-white.jpg", 6, 40],
+      ["Engagements", "Նշանադրություն", "02", null, -2, 8, false, "engagement"],
+      ["Birthdays", "Ծննդյան տոն", "03", null, 2, 8, false, "birthday"],
+      ["Holy Baptism", "Սուրբ Մկրտություն", "04", null, 6, 40, false, "baptism"],
     ];
     const lefts = [130, 440, 750, 1060];
     data.forEach((d, i) => {
       const c = document.createElement("div"); c.className = "card" + (d[6] ? " hov" : "");
       c.style.left = lefts[i] + "px"; c.style.top = "0";
       c.style.transform = d[6] ? `translateY(-34px) rotate(-2deg) rotateY(9deg) rotateX(4deg) scale(1.06)` : `translateY(${d[5]}px) rotate(${d[4]}deg)`;
-      c.innerHTML = `<div class="ph"><img src="assets/img/${d[3]}" alt=""><svg class="fx" viewBox="0 0 276 362"></svg></div><div class="cap"><div><h4>${d[0]}</h4><small>${d[1]}</small></div><span>${d[2]}</span></div>`;
+      const ph = d[3]
+        ? `<div class="ph"><img src="assets/img/${d[3]}" alt=""></div>`
+        : `<div class="ph placeholder"><img src="assets/img/logo.png" alt="Villa Hills"><small>Your real ${d[7]} photos<br>go here</small></div>`;
+      c.innerHTML = `${ph}<div class="cap"><div><h4>${d[0]}</h4><small>${d[1]}</small></div><span>${d[2]}</span></div>`;
       wrap.appendChild(c);
-      const fx = c.querySelector(".fx"), r = rng(20 + i);
-      if (i === 0) { // petals
-        for (let k = 0; k < 26; k++) {
-          const x = r() * 276, y = r() * 362, rot = r() * 180;
-          const g = el("g", { transform: `translate(${x} ${y}) rotate(${rot})`, opacity: (.65 + r() * .35).toFixed(2) }, fx);
-          el("ellipse", { rx: 5 + r() * 4, ry: 3 + r() * 2, fill: ["#f6d7da", "#fff4f2", "#e9b3ba", "#fde9e4"][k % 4] }, g);
-        }
-      }
-      if (i === 1) { // rings
-        const g = el("g", { transform: "translate(138 112)" }, fx);
-        el("circle", { cx: -16, cy: 0, r: 28, fill: "none", stroke: "#E6CD98", "stroke-width": 6, opacity: .95 }, g);
-        el("circle", { cx: 16, cy: 0, r: 28, fill: "none", stroke: "#f6e6bd", "stroke-width": 6, opacity: .95 }, g);
-        el("circle", { cx: 0, cy: -2, r: 52, fill: "none", stroke: "rgba(255,240,200,.6)", "stroke-width": 1.2, "stroke-dasharray": "2 6" }, g);
-      }
-      if (i === 2) { // sparkles
-        for (let k = 0; k < 22; k++) {
-          const x = 70 + r() * 140, y = 30 + r() * 160, s = 2 + r() * 6;
-          el("path", { d: `M${x} ${y - s} L${x + s * .25} ${y} L${x} ${y + s} L${x - s * .25} ${y} Z M${x - s} ${y} L${x} ${y + s * .25} L${x + s} ${y} L${x} ${y - s * .25} Z`, fill: "#fff6d8", opacity: .9 }, fx);
-        }
-      }
-      if (i === 3) { const g = document.createElement("div"); g.className = "glow"; c.querySelector(".ph").appendChild(g); }
     });
-    // petals drifting outside the hovered card
-    const s = el("svg", { viewBox: "0 0 1440 600", style: "position:absolute;left:0;top:0;width:1440px;height:600px;pointer-events:none;overflow:visible" }, null);
-    wrap.appendChild(s); const r = rng(99);
-    for (let k = 0; k < 18; k++) {
-      const x = 120 + r() * 420, y = -40 + r() * 600;
-      const g = el("g", { transform: `translate(${x} ${y}) rotate(${r() * 180})`, opacity: (.5 + r() * .4).toFixed(2) }, s);
-      el("ellipse", { rx: 6 + r() * 4, ry: 3.5, fill: ["#efc3c8", "#fbe6e2", "#e2a6ae"][k % 3] }, g);
-    }
   })();
 
   /* ---------------- kitchen wedges + steam ---------------- */
@@ -292,7 +266,7 @@
       while (y < 1300) {
         const h = [200, 260, 320, 180, 290][Math.floor(r() * 5)];
         const t = document.createElement("div"); t.className = "tile";
-        Object.assign(t.style, { left: 40 + c * (colW + gap) + "px", top: y + "px", width: colW + "px", height: h + "px", transform: `skewY(${(c - 3.5) * -0.6}deg)` });
+        Object.assign(t.style, { left: 40 + c * (colW + gap) + "px", top: y + "px", width: colW + "px", height: h + "px" });
         t.innerHTML = `<img src="assets/img/${imgs[k++ % imgs.length]}.jpg" alt="">`;
         w.appendChild(t); y += h + gap;
       }
@@ -417,7 +391,7 @@
 
   (function () {
     const cal = $("#cal"); if (!cal) return;
-    const Y = 2027, M = 5, SEL = 12, booked = [5, 6, 19, 20, 26];
+    const Y = 2027, M = 5, SEL = 12, booked = [];
     ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].forEach(d => { const x = document.createElement("div"); x.className = "dow"; x.textContent = d; cal.appendChild(x); });
     const first = (new Date(Date.UTC(Y, M, 1)).getUTCDay() + 6) % 7;
     for (let i = 0; i < first; i++) { const x = document.createElement("div"); x.className = "day empty"; cal.appendChild(x); }

@@ -7,16 +7,15 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-nav="light" data-hud="on">
+<!--
+  Rules for this mockup:
+  - Every photo is a real Villa Hills photo from villahillsrestaurant.am, shown unedited (crop + text scrims only).
+  - The brand always appears as the full original logo image (assets/img/logo.png). The name is never typeset in another font.
+-->
 
 <!-- ================= GLOBAL UI ================= -->
 <header class="nav">
-  <div class="brand">
-    <svg viewBox="0 0 84 48" fill="none" stroke="#C8A76B" stroke-width="1.8" stroke-linecap="round">
-      <path d="M2 34 C14 30 22 12 34 12 C44 12 48 24 54 26 C60 20 64 14 70 14 C76 14 80 22 82 26"/>
-      <path d="M10 40 C30 34 54 34 80 38"/><path d="M24 46 C40 42 58 42 72 45"/>
-    </svg>
-    <span>VILLA HILLS</span>
-  </div>
+  <div class="brand"><img class="logo-nav" src="assets/img/logo.png" alt="Villa Hills"></div>
   <nav class="nav-links">
     <a class="on" href="#s02a">Open Hall</a><a href="#s03">Glazed Hall</a><a href="#s05">Celebrations</a><a href="#s06">Kitchen</a><a href="#s08">Gallery</a>
   </nav>
@@ -28,35 +27,17 @@
 
 <div class="hud">
   <svg viewBox="0 0 74 38"><path d="M3 34 A34 30 0 0 1 71 34" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-dasharray="2 3"/><line x1="0" y1="34" x2="74" y2="34" stroke="currentColor" stroke-opacity=".5"/><circle id="hudSun" cx="10" cy="22" r="5" fill="#E6CD98"/></svg>
-  <div><div class="t" id="hudTime">17:00</div><div class="meta" id="hudMeta">Ptghni · 24°C · Sunny</div></div>
+  <div><div class="t" id="hudTime">17:00</div><div class="meta" id="hudMeta">Ptghni</div></div>
 </div>
 
 <div class="cursor" id="cursor"><div class="ff"></div><div class="ring" id="cursorLabel">DRAG</div></div>
 <div id="trail"></div>
-<div class="grain"></div>
 
 <!-- ================= S00a PRELOADER ================= -->
 <section class="scene" id="s00a" data-nav="off" data-hud="off" data-cursor="none">
   <div class="pre-hy hy">ԲՆԱԿԱՆ  ԵՎ  ՇՔԵՂ</div>
-  <div class="pre-center">
-    <svg id="preSvg" viewBox="0 0 760 300" fill="none">
-      <defs>
-        <clipPath id="aboveHill"><path d="M0 230 C90 222 150 120 250 112 C330 106 370 170 420 176 C470 150 520 92 590 96 C650 100 700 170 760 186 L760 0 L0 0 Z"/></clipPath>
-        <radialGradient id="sunG" cx="50%" cy="45%"><stop offset="0" stop-color="#fff4d6"/><stop offset=".55" stop-color="#f3c47e"/><stop offset="1" stop-color="#e09a55"/></radialGradient>
-        <radialGradient id="sunHalo"><stop offset="0" stop-color="rgba(240,180,100,.55)"/><stop offset="1" stop-color="rgba(240,180,100,0)"/></radialGradient>
-        <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <g clip-path="url(#aboveHill)">
-        <circle cx="410" cy="200" r="150" fill="url(#sunHalo)"/>
-        <circle cx="410" cy="196" r="54" fill="url(#sunG)"/>
-      </g>
-      <path id="preMain" d="M0 230 C90 222 150 120 250 112 C330 106 370 170 420 176 C470 150 520 92 590 96 C650 100 700 170 760 186" stroke="#C8A76B" stroke-width="2.2" stroke-linecap="round" filter="url(#glow)"/>
-      <path id="preL2" d="M120 252 C300 226 500 228 700 246" stroke="#C8A76B" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>
-      <path id="preL3" d="M220 278 C360 262 480 262 620 274" stroke="#C8A76B" stroke-width="1.2" stroke-linecap="round" opacity=".6"/>
-      <circle id="preTip" r="4" fill="#fff4d6" filter="url(#glow)"/>
-      <circle id="preTipHalo" r="16" fill="url(#sunHalo)"/>
-    </svg>
-    <div class="pre-word">VILLA HILLS</div>
+  <div class="pre-logo">
+    <img src="assets/img/logo.png" alt="Villa Hills">
   </div>
   <div class="pre-loc eyebrow">Ptghni<span class="dot"></span>5 km from Yerevan</div>
   <div class="pre-count">64<sup>%</sup></div>
@@ -66,26 +47,16 @@
 <!-- ================= S00b CURTAIN REVEAL ================= -->
 <section class="scene" id="s00b" data-nav="off" data-hud="off" data-cursor="none">
   <img class="bg" src="assets/img/garden-ceremony.jpg" alt="">
-  <svg class="curtain" viewBox="0 0 1440 900" preserveAspectRatio="none">
-    <defs><filter id="cg"><feGaussianBlur stdDeviation="6"/></filter></defs>
-    <path d="M0 340 C170 330 285 200 475 190 C625 182 700 265 795 273 C890 240 985 162 1118 167 C1232 172 1327 265 1440 286 L1440 0 L0 0 Z" fill="#0c1014"/>
-    <path d="M0 620 C170 610 285 480 475 470 C625 462 700 545 795 553 C890 520 985 442 1118 447 C1232 452 1327 545 1440 566 L1440 900 L0 900 Z" fill="#0c1014"/>
-    <g fill="none" stroke="#E6CD98">
-      <path d="M0 340 C170 330 285 200 475 190 C625 182 700 265 795 273 C890 240 985 162 1118 167 C1232 172 1327 265 1440 286" stroke-width="8" opacity=".45" filter="url(#cg)"/>
-      <path d="M0 340 C170 330 285 200 475 190 C625 182 700 265 795 273 C890 240 985 162 1118 167 C1232 172 1327 265 1440 286" stroke-width="2"/>
-      <path d="M0 620 C170 610 285 480 475 470 C625 462 700 545 795 553 C890 520 985 442 1118 447 C1232 452 1327 545 1440 566" stroke-width="8" opacity=".45" filter="url(#cg)"/>
-      <path d="M0 620 C170 610 285 480 475 470 C625 462 700 545 795 553 C890 520 985 442 1118 447 C1232 452 1327 545 1440 566" stroke-width="2"/>
-    </g>
-  </svg>
-  <div class="curtain-word">VILLA HILLS</div>
+  <div class="panel top"><img src="assets/img/logo.png" alt="Villa Hills"></div>
+  <div class="panel bottom"></div>
 </section>
 
 <!-- ================= S01 HERO ================= -->
-<section class="scene" id="s01" data-time="17:00" data-meta="Ptghni · 24°C · Sunny" data-cursor="1062,742,ff" data-trail="1">
+<section class="scene" id="s01" data-time="17:00" data-meta="Ptghni · Afternoon" data-cursor="1062,742,ff" data-trail="1">
   <img class="bg" src="assets/img/garden-ceremony.jpg" alt="">
   <div class="shade"></div>
   <div class="hero-copy">
-    <div class="eyebrow">Villa Hills<span class="dot"></span>Ptghni<span class="dot"></span>5 km from Yerevan</div>
+    <div class="eyebrow">Ptghni<span class="dot"></span>5 km from Yerevan</div>
     <h1 class="display">Natural.<span class="l2"><em class="foil">Luxurious.</em></span></h1>
     <div class="hero-sub">
       <span class="hy">Բնական և շքեղ</span>
@@ -96,45 +67,43 @@
     <a class="btn btn-text">Explore the Open Hall <i class="ln"></i></a>
     <a class="btn btn-gold">Reserve your date</a>
   </div>
-  <div class="scroll-cue">Scroll · the sun is setting<i></i></div>
+  <div class="scroll-cue">Scroll · the evening begins<i></i></div>
   <div class="sound"><span class="eq"><i style="height:6px"></i><i style="height:14px"></i><i style="height:9px"></i><i style="height:16px"></i><i style="height:5px"></i></span>Turn on the evening</div>
 </section>
 
-<!-- ================= S02a OPEN HALL – DAY ================= -->
-<section class="scene oh" id="s02a" data-time="17:30" data-meta="Ptghni · 24°C · Sunny" data-cursor="none" data-sun="0.07">
-  <div class="frame43"><img src="assets/img/openhall-wide.jpg" alt=""><div class="sky"></div></div>
+<!-- ================= S02a OPEN HALL – AFTERNOON ================= -->
+<section class="scene oh" id="s02a" data-time="17:30" data-meta="Ptghni · Afternoon" data-cursor="none" data-sun="0.07">
+  <div class="frame43"><img src="assets/img/openhall-wide.jpg" alt=""></div>
   <div class="oh-title"><div class="eyebrow">Chapter I<span class="dot"></span>The Open Hall</div><div class="display">The Open<br><em>Hall</em></div></div>
   <div class="oh-card">
     <div class="eyebrow">17:30 · Arrival</div>
     <h2 class="display">Under one<br><em>open sky</em></h2>
-    <p>Beautiful natural views, refined design and an amazing garden. This is where every Villa Hills evening begins.</p>
+    <p>Beautiful natural views, refined design and an amazing garden. This is where the evening begins.</p>
     <div class="stat"><b>350</b><span>guests<br>up to</span></div>
   </div>
   <div class="timeline" data-fill="0.071"></div>
 </section>
 
-<!-- ================= S02b OPEN HALL – GOLDEN HOUR ================= -->
-<section class="scene oh" id="s02b" data-time="19:40" data-meta="Ptghni · Golden hour" data-cursor="none" data-sun="0.38">
-  <div class="frame43"><img src="assets/img/openhall-wide.jpg" alt=""><div class="sky2"></div><div class="sky"></div><div class="skygold"></div><div class="longshadow"></div><div class="sunflare"></div></div>
+<!-- ================= S02b OPEN HALL – SUNSET ================= -->
+<section class="scene oh" id="s02b" data-time="19:40" data-meta="Ptghni · Sunset" data-cursor="none" data-sun="0.38">
+  <div class="frame43"><img src="assets/img/sunset-table.jpg" alt=""></div>
   <div class="oh-card">
-    <div class="eyebrow">19:40 · Golden hour</div>
-    <h2 class="display">The garden<br><em>turns gold</em></h2>
-    <p>The ceremony happens under the open sky, while the sun goes down behind the hills. Every shadow on the floor moves with your scroll.</p>
+    <div class="eyebrow">19:40 · Sunset</div>
+    <h2 class="display">The sun sets<br><em>behind the hills</em></h2>
+    <p>Dinner under the open sky, with the mountains all around. The photo crossfades in as you scroll.</p>
     <div class="stat"><b>5</b><span>km from<br>Yerevan</span></div>
   </div>
   <div class="timeline" data-fill="0.381"></div>
 </section>
 
 <!-- ================= S02c OPEN HALL – NIGHT ================= -->
-<section class="scene oh" id="s02c" data-time="21:30" data-meta="Ptghni · 18°C · Clear night" data-cursor="none" data-sun="0.64">
-  <div class="frame43"><img src="assets/img/openhall-wide.jpg" alt=""><div class="sky"></div><div class="warm"></div>
-    <svg class="lights" id="nightLights" viewBox="0 0 1600 1200" preserveAspectRatio="none"></svg>
-  </div>
+<section class="scene oh" id="s02c" data-time="21:30" data-meta="Ptghni · Night" data-cursor="none" data-sun="0.64">
+  <div class="frame43"><img src="assets/img/night-sparklers.jpg" alt=""></div>
   <div class="oh-card">
     <div class="eyebrow">21:30 · First dance</div>
     <h2 class="display">The lights<br><em>come on</em></h2>
-    <p>String lights switch on one bulb at a time, candles flicker on the tables, and fireflies drift through the garden. Live music from musicians we select among the best.</p>
-    <div class="stat"><span class="eq" style="height:40px;gap:4px"><i style="height:14px;width:3px"></i><i style="height:30px;width:3px"></i><i style="height:22px;width:3px"></i><i style="height:38px;width:3px"></i><i style="height:18px;width:3px"></i><i style="height:28px;width:3px"></i><i style="height:10px;width:3px"></i></span><span>Live band<br>playing now</span></div>
+    <p>Live music from musicians we select among the best, and fireworks around the cake.</p>
+    <div class="stat"><span class="eq" style="height:40px;gap:4px"><i style="height:14px;width:3px"></i><i style="height:30px;width:3px"></i><i style="height:22px;width:3px"></i><i style="height:38px;width:3px"></i><i style="height:18px;width:3px"></i><i style="height:28px;width:3px"></i><i style="height:10px;width:3px"></i></span><span>Live music</span></div>
   </div>
   <div class="timeline" data-fill="0.643"></div>
 </section>
@@ -148,12 +117,12 @@
     <div class="tour-exit">✕ Exit tour</div>
   </div>
   <div class="hot" style="left:46%;top:79%"><div class="pulse"></div><label>Dance floor</label></div>
-  <div class="hot" style="left:11%;top:42%"><div class="pulse"></div><label>Living trees</label></div>
-  <div class="hot" style="left:88%;top:50%"><div class="pulse"></div><label>Garden terrace</label></div>
+  <div class="hot" style="left:11%;top:42%"><div class="pulse"></div><label>The trees</label></div>
+  <div class="hot" style="left:88%;top:50%"><div class="pulse"></div><label>Terrace</label></div>
   <div class="hot" style="left:53%;top:47%"><div class="pulse" style="background:#fff6dc"></div></div>
   <div class="hot-card" style="left:800px;top:250px">
     <img src="assets/img/head-table-flowers.jpg" alt="">
-    <div><div class="eyebrow" style="color:#9b7f4a">Hotspot 03 / 06</div><h4>Head table &amp; stage</h4><p>Where the couple sits and the live band plays. Tap to see it dressed for a real wedding.</p></div>
+    <div><div class="eyebrow" style="color:#9b7f4a">Hotspot 03 / 06</div><h4>Head table</h4><p>Where the couple sits. Tap to see more real photos of this spot.</p></div>
   </div>
   <div class="tour-help"><span><kbd>⟲</kbd>Drag to look around</span><span><kbd>↓</kbd>Scroll to walk</span></div>
   <div class="minimap"><svg viewBox="0 0 170 170">
@@ -187,56 +156,51 @@
     <div class="plan-sum"><div><b>24</b>tables</div><div><b>240</b>guests</div><div><b>Open Hall</b>recommended</div></div>
     <a class="btn">Send this layout to us →</a>
   </div>
-  <div class="plan-stage"><svg id="planSvg" viewBox="0 0 960 760"></svg></div>
+  <div class="plan-stage"><svg id="planSvg" viewBox="0 0 960 760"></svg><div class="plan-note">Example layout · the real one will be drawn from your Open Hall floor plan</div></div>
 </section>
 
 <!-- ================= S02f MOODS ================= -->
-<section class="scene" id="s02f" data-time="19:30" data-meta="Ptghni · Sunset" data-cursor="none" data-sun="0.36">
-  <img class="bg" src="assets/img/sunset-table.jpg" alt="" style="filter:saturate(1.1) contrast(1.05)">
+<section class="scene" id="s02f" data-hud="off" data-cursor="none">
+  <img class="bg" src="assets/img/ring-arch-table.jpg" alt="">
   <div class="shade"></div>
-  <div class="mood-title"><div class="eyebrow">Open Hall<span class="dot"></span>Choose the mood</div><h2 class="display">Sunset <em>dinner</em></h2></div>
+  <div class="mood-title"><div class="eyebrow">Open Hall<span class="dot"></span>Choose the mood</div><h2 class="display">Garden <em>ceremony</em></h2></div>
   <div class="moods">
-    <div class="mood"><img src="assets/img/garden-ceremony.jpg" alt=""><div><h5>Garden ceremony</h5><small>Day · 16:00</small></div></div>
-    <div class="mood on"><img src="assets/img/sunset-table.jpg" alt=""><div><h5>Sunset dinner</h5><small>Golden hour · 19:30</small></div></div>
-    <div class="mood"><img src="assets/img/night-sparklers.jpg" alt=""><div><h5>Night party</h5><small>After dark · 22:00</small></div></div>
+    <div class="mood on"><img src="assets/img/ring-arch-table.jpg" alt=""><div><h5>Garden ceremony</h5><small>Daytime</small></div></div>
+    <div class="mood"><img src="assets/img/sunset-table.jpg" alt=""><div><h5>Sunset dinner</h5><small>Golden hour</small></div></div>
+    <div class="mood"><img src="assets/img/night-sparklers.jpg" alt=""><div><h5>Night party</h5><small>After dark</small></div></div>
   </div>
 </section>
 
 <!-- ================= S03 GLAZED HALL ================= -->
-<section class="scene" id="s03" data-nav="light" data-hud="off" data-cursor="none">
-  <div class="season summer"><div class="frame43"><img src="assets/img/glazed-dome-day.jpg" alt="" style="filter:saturate(1.15) sepia(.12)"></div></div>
-  <div class="season winter">
-    <div class="frame43"><img class="cold" src="assets/img/glazed-dome-day.jpg" alt=""><div class="tint"></div><div class="frost"></div><div class="snowground"></div><img class="warm" src="assets/img/glazed-dome-day.jpg" alt=""><div class="ember"></div></div>
-    <canvas id="snow" width="1440" height="900"></canvas>
+<section class="scene" id="s03" data-nav="light" data-hud="off" data-cursor="980,470,drag">
+  <div class="gz-copy">
+    <div class="eyebrow">Chapter II<span class="dot"></span>The Glazed Hall</div>
+    <h2 class="display">Summer, kept<br><em>under glass</em></h2>
+    <p class="lead">A panoramic glass hall with mountains on every side, where the feeling of summer stays in every season.</p>
+    <div class="gz-facts"><div><b>120</b>guests, up to</div><div><b>All year</b>round</div></div>
   </div>
-  <div class="frame43" style="pointer-events:none"><div class="glint"></div></div>
-  <div class="glazed-shade"></div>
-  <div class="split-line"></div>
-  <div class="split-knob">◂ ▸</div>
-  <div class="season-tag" style="left:calc(52% - 236px);top:76%">❄&nbsp; Outside · Winter</div>
-  <div class="season-tag" style="left:calc(52% + 40px);top:76%">☀&nbsp; Outside · Summer</div>
-  <div class="season-tag" style="left:calc(52% - 290px);top:52%;background:rgba(200,167,107,.92);color:#0c1014">Inside · still summer</div>
-  <div class="glazed-copy"><div class="eyebrow">Chapter II<span class="dot"></span>The Glazed Hall</div><h2 class="display">Summer, kept<br><em>under glass</em></h2><p>Drag across the seasons. Outside, the world changes. Inside, the feeling of summer stays all year.</p></div>
-  <div class="seasons-bar">
-    <div class="ss"><span class="on">Winter</span><span>Spring</span><span>Summer</span><span>Autumn</span></div>
-    <div class="facts"><div><b>120</b>guests, up to</div><div><b>360°</b>mountain views</div><div><b>12</b>months a year</div></div>
+  <div class="gz-strip">
+    <figure style="width:640px"><img src="assets/img/glazed-dome-dusk.jpg" alt=""></figure>
+    <figure style="width:400px"><img src="assets/img/dome-inside-tall.jpg" alt=""></figure>
+    <figure style="width:640px"><img src="assets/img/glazed-dome-day.jpg" alt=""></figure>
   </div>
+  <div class="gz-progress"><span>Scroll sideways around the hall</span><div class="bar"><i></i></div><span>01 / 06</span></div>
 </section>
 
 <!-- ================= S04 CLOSED HALL ================= -->
 <section class="scene" id="s04" data-nav="light" data-hud="off" data-cursor="none">
-  <div class="flash" id="flash" style="left:1196px;top:420px"><img src="assets/img/canopy-white-flowers.jpg" alt=""></div><div class="flash-ring" style="left:1196px;top:420px"></div>
+  <div class="torch" style="left:1196px;top:420px"><span>Opening<br><em>soon</em></span></div>
   <div class="door"><div class="arch"></div><div class="leaf l"></div><div class="leaf r"></div><div class="gap"></div><div class="under"></div><div class="floor"></div></div>
   <div class="closed-copy">
     <div class="eyebrow">Chapter III<span class="dot"></span>The Closed Hall · Coming soon</div>
     <h2 class="display">Something is being prepared <em>behind these doors</em></h2>
-    <p class="lead">Move your light across the dark to catch a glimpse. Be the first to know when the doors open.</p>
+    <p class="lead">Move your light across the dark. Be the first to know when the doors open.</p>
     <div class="notify"><span>Your WhatsApp or email</span><b>Notify me →</b></div>
   </div>
 </section>
 
 <!-- ================= S05 CELEBRATIONS ================= -->
-<section class="scene" id="s05" data-nav="dark" data-hud="off" data-cursor="330,560,open">
+<section class="scene" id="s05" data-nav="dark" data-hud="off" data-cursor="300,560,open">
   <div class="cel-head" style="left:0;right:0;text-align:center;top:116px">
     <div class="eyebrow">Celebrations</div>
     <h2 class="display">Your dream <em>celebration</em></h2>
@@ -246,18 +210,15 @@
 </section>
 
 <!-- ================= S06 KITCHEN ================= -->
-<section class="scene" id="s06" data-time="20:30" data-meta="Ptghni · Dinner is served" data-cursor="none" data-sun="0.5">
+<section class="scene" id="s06" data-time="20:30" data-meta="Ptghni · Dinner" data-cursor="none" data-sun="0.5">
   <div class="kit-copy">
     <div class="eyebrow">Chapter IV<span class="dot"></span>The Kitchen</div>
     <h2 class="display">A rich <em>menu</em></h2>
-    <p class="lead">Scroll, and every dish assembles itself in front of you. Hover to see it steam. Drag a plate to turn it.</p>
-    <div class="menu">
-      <div class="on">Salads <small>→</small></div><div>Cold appetizers <small>→</small></div><div>Hot dishes <small>→</small></div><div>Desserts <small>→</small></div>
-    </div>
+    <p class="lead">A tasty kitchen with a rich menu. Scroll, and each dish comes to the table. Drag a plate to turn it.</p>
+    <a class="btn btn-line" style="color:#E6CD98;margin-top:36px">See the full menu →</a>
   </div>
-  <div class="plate" id="plate"><div class="shadow"></div><svg class="steam" viewBox="0 0 300 300" id="steam"></svg></div>
+  <div class="plate-photo"><img src="assets/img/dish-shrimp.jpg" alt=""></div>
   <div class="r360">360°</div>
-  <div class="dish-label"><h4>Shrimp, arugula &amp; cherry tomato</h4><small>Salads · Drag to rotate</small></div>
   <div class="kit-dishes">
     <div class="d on"><i style="background-image:url(assets/img/dish-shrimp.jpg)"></i></div>
     <div class="d"><i style="background-image:url(assets/img/dish-mussels.jpg)"></i></div>
@@ -268,7 +229,7 @@
 
 <!-- ================= S07a THE SHOW ================= -->
 <section class="scene" id="s07a" data-time="22:30" data-meta="Ptghni · The show" data-cursor="560,262,ff" data-sun="0.79">
-  <svg class="cone" viewBox="0 0 1440 900"><defs><linearGradient id="cg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,240,210,.32)"/><stop offset="1" stop-color="rgba(255,240,210,0)"/></linearGradient><filter id="cb"><feGaussianBlur stdDeviation="14"/></filter></defs><polygon points="960,-20 1040,-20 1340,780 640,780" fill="url(#cg1)" filter="url(#cb)"/></svg>
+  <svg class="cone" viewBox="0 0 1440 900"><defs><linearGradient id="cg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,240,210,.32)"/><stop offset="1" stop-color="rgba(255,240,210,0)"/></linearGradient><filter id="cb"><feGaussianBlur stdDeviation="14"/></filter></defs><polygon points="960,-20 1040,-20 1340,170 640,170" fill="url(#cg1)" filter="url(#cb)"/></svg>
   <div class="show-list">
     <div class="eyebrow">Chapter V<span class="dot"></span>The Show</div>
     <div class="row"><span>01</span>Hosts</div>
@@ -279,13 +240,14 @@
     <div class="row"><span>06</span>Aerial fireworks</div>
     <div class="row"><span>07</span>Photo &amp; video</div>
   </div>
-  <div class="stage-ph"><img src="assets/img/string-quartet.jpg" alt=""><div class="mask"></div><div class="wave" id="wave"></div></div>
-  <div class="now-playing"><i class="pp">❚❚</i>Preview · Villa Hills live music</div>
+  <div class="stage-ph"><img src="assets/img/string-quartet.jpg" alt=""><div class="wave" id="wave"></div></div>
+  <div class="now-playing"><i class="pp">❚❚</i>Preview · live music</div>
   <div class="my-evening"><b>2</b>My evening</div>
 </section>
 
 <!-- ================= S07b THE SHOW – PHOTO & VIDEO ================= -->
 <section class="scene" id="s07b" data-time="22:50" data-meta="Ptghni · The show" data-cursor="610,652,ff" data-sun="0.83">
+  <div class="flashw"></div>
   <div class="show-list">
     <div class="eyebrow">Chapter V<span class="dot"></span>The Show</div>
     <div class="row"><span>01</span>Hosts</div>
@@ -296,19 +258,18 @@
     <div class="row"><span>06</span>Aerial fireworks</div>
     <div class="row on"><span>07</span>Photo &amp; video<span class="add">+ Add</span></div>
   </div>
-  <figure class="polaroid" style="left:690px;top:300px;transform:rotate(-9deg)"><img src="assets/img/couple-dip.jpg" alt=""><figcaption>the first dance</figcaption></figure>
-  <figure class="polaroid" style="left:1010px;top:330px;transform:rotate(7deg)"><img src="assets/img/night-sparklers.jpg" alt=""><figcaption>cake fireworks</figcaption></figure>
-  <figure class="polaroid" style="left:860px;top:150px;transform:rotate(-2deg) scale(1.04);box-shadow:0 60px 90px rgba(0,0,0,.6)"><img src="assets/img/head-table-flowers.jpg" alt=""><figcaption>click.</figcaption></figure>
-  <div class="flashw"></div>
+  <figure class="polaroid" style="left:690px;top:300px;transform:rotate(-9deg)"><img src="assets/img/couple-dip.jpg" alt=""></figure>
+  <figure class="polaroid" style="left:1010px;top:330px;transform:rotate(7deg)"><img src="assets/img/night-sparklers.jpg" alt=""></figure>
+  <figure class="polaroid" style="left:860px;top:150px;transform:rotate(-2deg) scale(1.04);box-shadow:0 60px 90px rgba(0,0,0,.6)"><img src="assets/img/head-table-flowers.jpg" alt=""></figure>
   <div class="my-evening"><b>3</b>My evening</div>
 </section>
 
 <!-- ================= S08 GALLERY ================= -->
 <section class="scene" id="s08" data-nav="light" data-hud="off" data-cursor="720,470,drag">
   <div class="gal-world" id="galWorld"></div>
-  <div class="gal-fade"></div><div class="gal-shade"></div>
+  <div class="gal-shade"></div>
   <div class="gal-ui">
-    <span class="chip on">All</span><span class="chip">Open Hall</span><span class="chip">Glazed Hall</span><span class="chip">Weddings</span><span class="chip">Engagements</span><span class="chip">Birthdays</span><span class="chip">Baptism</span><span class="chip">Night</span><span class="chip">Fireworks</span>
+    <span class="chip on">All</span><span class="chip">Open Hall</span><span class="chip">Glazed Hall</span><span class="chip">Weddings</span><span class="chip">Night</span>
   </div>
   <div class="gal-title"><div class="eyebrow">Gallery</div><h2 class="display">Real <em>moments</em></h2></div>
   <div class="gal-count">Drag in any direction<br>Click a photo to open it</div>
@@ -316,24 +277,29 @@
 
 <!-- ================= S09 MIDNIGHT ================= -->
 <section class="scene" id="s09" data-time="00:00" data-meta="Ptghni · Midnight" data-cursor="none" data-sun="1">
-  <div class="frame43"><img src="assets/img/openhall-wide.jpg" alt=""><div class="sky"></div></div>
-  <canvas id="fw" width="2880" height="1800"></canvas>
-  <div class="ripple" style="left:1250px;top:560px"></div>
-  <div class="finale"><h2 class="display">Every story deserves <em class="foil">a finale</em></h2><a class="btn btn-gold">Reserve your date</a></div>
-  <div class="tap-hint">Tap anywhere · launch a firework</div>
+  <div class="fin-photo"><img src="assets/img/fireworks-bride.jpg" alt=""></div>
+  <div class="fin-copy">
+    <div class="eyebrow">00:00 · The finale</div>
+    <h2 class="display">Every story deserves <em class="foil">a finale</em></h2>
+    <p class="lead">Aerial fireworks over the garden. On the website, every tap launches a firework across the screen.</p>
+    <a class="btn btn-gold">Reserve your date</a>
+  </div>
 </section>
 
 <!-- ================= S10 LOCATION ================= -->
 <section class="scene" id="s10" data-nav="light" data-hud="off" data-cursor="none">
-  <div class="map-wrap"><svg id="mapSvg" viewBox="0 0 1080 900"></svg></div>
+  <div class="map-real"><img src="assets/img/map-real.jpg" alt=""></div>
+  <div class="map-fade"></div>
   <div class="loc-copy">
     <div class="eyebrow">Location</div>
     <h2 class="display">5 km from Yerevan. <em>A world away.</em></h2>
-    <p class="lead">Ptghni, Kotayk. The road leaves the city and the hills open up around you.</p>
-    <div class="loc-facts"><div><b>5 km</b>from Yerevan</div><div><b>Ptghni</b>Kotayk region</div></div>
+    <p class="lead">Ptghni, Kotayk region. The route draws itself from the city centre to the hills.</p>
+    <div class="loc-facts"><div><b>16 km</b>from Republic Sq.</div><div><b>≈ 22 min</b>by car</div></div>
     <div class="nav-apps"><span class="chip">Google Maps</span><span class="chip">Yandex Go</span><span class="chip">Waze</span></div>
   </div>
-  <div class="arrive" id="arrive"><img src="assets/img/entrance-gate.jpg" alt=""><h5>You've arrived</h5><small>Villa Hills · Ptghni</small></div>
+  <div class="map-tag" style="left:1012px;top:268px">Ptghni</div>
+  <div class="map-tag" style="left:742px;top:772px">Republic Square</div>
+  <div class="map-attr">Map data © OpenStreetMap contributors · route: OSRM</div>
 </section>
 
 <!-- ================= S11a BOOKING ================= -->
@@ -354,7 +320,7 @@
   </div>
   <div class="summary">
     <div class="eyebrow">Your evening</div>
-    <h3>A wedding at<br>Villa Hills</h3>
+    <h3>Your wedding</h3>
     <div class="sum-row"><span>Guests</span><b>240</b></div>
     <div class="sum-row"><span>Hall</span><b>Open Hall<em>Recommended for 120+ guests</em></b></div>
     <div class="sum-row"><span>Date</span><b id="sumDate">Sat, 12 June 2027<em id="sumSun"></em></b></div>
@@ -364,7 +330,7 @@
   </div>
 </section>
 
-<!-- ================= S11b SEALED ================= -->
+<!-- ================= S11b SENT ================= -->
 <section class="scene" id="s11b" data-nav="dark" data-hud="off" data-cursor="none">
   <div class="env-trail"></div>
   <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 1440 900">
@@ -374,28 +340,23 @@
   </svg>
   <div class="env-wrap"><div class="envelope">
     <svg viewBox="0 0 520 330" preserveAspectRatio="none"><g fill="none" stroke="#d8c9ad" stroke-width="1.4"><path d="M0 0 L260 170 L520 0"/><path d="M0 330 L200 150"/><path d="M520 330 L320 150"/></g><rect x="10" y="10" width="500" height="310" fill="none" stroke="#C8A76B" stroke-opacity=".35"/></svg>
-    <svg class="seal" viewBox="0 0 120 120">
-      <defs><radialGradient id="wax" cx="40%" cy="35%"><stop offset="0" stop-color="#f1dcaa"/><stop offset=".5" stop-color="#c9a160"/><stop offset="1" stop-color="#8d6a35"/></radialGradient></defs>
-      <path d="M60 4 C72 6 78 2 88 10 C98 18 108 20 112 34 C116 46 120 54 114 66 C110 78 116 88 104 98 C94 108 86 116 72 114 C60 112 50 120 38 112 C26 106 14 104 8 90 C2 78 6 68 4 58 C2 46 8 36 16 26 C24 14 34 10 46 8 C52 6 54 3 60 4 Z" fill="url(#wax)"/>
-      <circle cx="60" cy="60" r="38" fill="none" stroke="#7d5c2b" stroke-opacity=".5" stroke-width="2"/>
-      <g fill="none" stroke="#6e5023" stroke-width="2.2" stroke-linecap="round"><path d="M34 62 C40 60 44 48 52 48 C58 48 60 56 64 57 C68 52 71 48 76 48 C81 48 84 55 86 58"/><path d="M38 68 C52 64 68 64 84 67"/><path d="M46 74 C56 71 66 71 76 73"/></g>
-    </svg>
+    <div class="seal-logo"><img src="assets/img/logo.png" alt="Villa Hills"></div>
   </div></div>
   <div class="thanks"><h2 class="display">Your evening is <em>on its way</em></h2><p>Thank you. Our team will contact you to confirm every detail.</p><div class="contacts"><span>+374 33 34 34 32</span><span>+374 41 34 34 32</span></div></div>
 </section>
 
 <!-- ================= S12 FOOTER ================= -->
-<section class="scene" id="s12" data-time="05:40" data-meta="Ptghni · Sunrise" data-nav="light" data-cursor="760,770,ff" data-sun="0.02">
+<section class="scene" id="s12" data-time="05:40" data-meta="Ptghni · Sunrise" data-nav="light" data-cursor="none" data-sun="0.02">
   <div class="dawn"></div>
   <div class="foot-grid">
-    <div><h6>Villa Hills</h6><p class="big">Let's create your most beautiful <em>evening.</em></p></div>
+    <div><p class="big">Let's create your most beautiful <em>evening.</em></p></div>
     <div><h6>Contact</h6><p>+374 33 34 34 32</p><p>+374 41 34 34 32</p><p style="font-size:19px">villahillscomplex@gmail.com</p></div>
     <div><h6>Find us</h6><p>Ptghni, Kotayk</p><p>5 km from Yerevan</p><h6 style="margin-top:28px">Follow</h6><p>Instagram · Facebook · YouTube</p></div>
     <div style="display:flex;justify-content:flex-end;align-items:flex-start"><div class="sunrise-btn" style="position:static"><i></i>Watch the sunrise</div></div>
   </div>
-  <div class="foot-cta"><a class="btn btn-gold">Reserve your date</a><a class="btn btn-line">Call +374 33 34 34 32</a><span>Natural &amp; luxurious, 5 km from Yerevan.</span></div>
-  <div class="wordmark" id="wordmark"></div>
-  <div class="foot-bar"><span>Հայերեն · English · Русский</span><span>© Villa Hills</span></div>
+  <div class="foot-cta"><a class="btn btn-gold">Reserve your date</a><a class="btn btn-line">Call +374 33 34 34 32</a></div>
+  <div class="foot-logo"><img src="assets/img/logo.png" alt="Villa Hills"></div>
+  <div class="foot-bar"><span>Հայերեն · English · Русский</span><span>Natural &amp; luxurious</span></div>
 </section>
 
 <script src="app.js"></script>

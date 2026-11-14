@@ -20,7 +20,7 @@
   .ph-cap b { color: var(--gold-2); font-weight: 600; }
 
   .sb { position: absolute; z-index: 19; left: 0; right: 0; top: 0; height: 54px; display: flex; justify-content: space-between; align-items: center; padding: 6px 34px 0; color: #fff; font: 600 15px/1 var(--sans); }
-  .mnav { position: absolute; z-index: 10; left: 22px; right: 22px; top: 66px; display: flex; justify-content: space-between; align-items: center; color: var(--ivory); }
+  .mnav { position: absolute; z-index: 10; left: 14px; right: 22px; top: 58px; display: flex; justify-content: space-between; align-items: center; color: var(--ivory); }
   .mnav .brand svg { width: 34px; height: 20px; }
   .mnav .brand span { font-size: 15px; letter-spacing: .3em; }
   .burger { width: 26px; height: 12px; border-top: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; }
@@ -30,13 +30,13 @@
   .mbar i { font-style: normal; font-size: 15px; letter-spacing: 0; }
 
   /* phone 1 hero */
-  .p1 .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%; filter: saturate(1.05) contrast(1.06) sepia(.28) brightness(.78); }
+  .p1 .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%; }
   .p1 .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,16,20,.7), transparent 24%, transparent 38%, rgba(12,16,20,.92) 88%); }
   .p1 .copy { position: absolute; left: 24px; right: 24px; bottom: 132px; color: var(--ivory); }
   .p1 .eyebrow { color: var(--gold-2); font-size: 10px; margin-bottom: 18px; }
   .p1 h1 { font-size: 84px; }
   .p1 .hy { display: block; margin-top: 18px; font-size: 20px; color: var(--gold-2); }
-  .p1 .tilt { position: absolute; left: 22px; top: 126px; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 30px; background: rgba(12,16,20,.45); backdrop-filter: blur(8px); color: var(--ivory); font: 600 10px/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
+  .p1 .tilt { position: absolute; left: 22px; top: 162px; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 30px; background: rgba(12,16,20,.45); backdrop-filter: blur(8px); color: var(--ivory); font: 600 10px/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
   .p1 .clock { position: absolute; left: 24px; top: 128px; color: var(--ivory); }
   .p1 .clock b { font: 400 26px/1 var(--serif); }
   .p1 .clock small { display: block; margin-top: 4px; font: 600 9px/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; opacity: .8; }
@@ -50,9 +50,9 @@
   .p2 .mcard .eyebrow { color: var(--gold-2); font-size: 10px; }
   .p2 .mcard h2 { font-size: 46px; margin: 14px 0 12px; }
   .p2 .mcard p { font: 300 13px/1.6 var(--sans); color: rgba(239,232,220,.82); }
-  .p2 .tl { position: absolute; left: 24px; right: 24px; top: 470px; height: 3px; border-radius: 3px; background: rgba(255,255,255,.18); }
+  .p2 .tl { position: absolute; left: 24px; right: 24px; top: 528px; height: 3px; border-radius: 3px; background: rgba(255,255,255,.18); }
   .p2 .tl i { display: block; width: 64%; height: 100%; border-radius: 3px; background: var(--gold); box-shadow: 0 0 10px var(--gold); }
-  .p2 .tlt { position: absolute; left: 24px; right: 24px; top: 484px; display: flex; justify-content: space-between; color: rgba(239,232,220,.75); font: 600 9px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; }
+  .p2 .tlt { position: absolute; left: 24px; right: 24px; top: 542px; display: flex; justify-content: space-between; color: rgba(239,232,220,.75); font: 600 9px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; }
   .p2 .tlt b { color: var(--gold-2); }
 
   /* phone 3 stories */
@@ -75,6 +75,10 @@
   .p3 .peek { position: absolute; z-index: 5; right: -150px; top: 210px; width: 190px; height: 420px; border-radius: 18px; overflow: hidden; transform: perspective(600px) rotateY(-28deg); box-shadow: -20px 20px 50px rgba(0,0,0,.5); }
   .p3 .peek img { width: 100%; height: 100%; object-fit: cover; }
   .p3 svg.petals { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .p2 .bg2 { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 42% 50%; }
+  .p2 .shade2 { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55), transparent 22%, transparent 45%, rgba(0,0,0,.75)); }
+  .p1 .shade { background: linear-gradient(180deg, rgba(12,16,20,.8), rgba(12,16,20,.2) 22%, transparent 34%, rgba(12,16,20,.88) 88%); }
+  .grain { display: none; }
 </style>
 </head>
 <body>
@@ -87,7 +91,7 @@
     <div class="island"></div>
     <div class="sb"><span>17:00</span><span>●●● ▮</span></div>
     <img class="bg" src="assets/img/garden-ceremony.jpg" alt=""><div class="shade"></div>
-    <div class="mnav"><div class="brand"><svg viewBox="0 0 84 48" fill="none" stroke="#C8A76B" stroke-width="2.4" stroke-linecap="round"><path d="M2 34 C14 30 22 12 34 12 C44 12 48 24 54 26 C60 20 64 14 70 14 C76 14 80 22 82 26"/><path d="M10 40 C30 34 54 34 80 38"/><path d="M24 46 C40 42 58 42 72 45"/></svg><span>VILLA HILLS</span></div><div class="burger"></div></div>
+    <div class="mnav"><div class="brand"><img src="assets/img/logo.png" alt="Villa Hills" style="height:92px;width:auto;display:block"></div><div class="burger"></div></div>
     <div class="tilt">⟲ Tilt to look around</div>
     <div class="copy"><div class="eyebrow">Ptghni<span class="dot"></span>5 km from Yerevan</div><h1 class="display">Natural.<br><em class="foil">Luxurious.</em></h1><span class="hy">Բնական և շքեղ</span></div>
     <div class="mbar"><span><i>✆</i>Call</span><span><i>◉</i>WhatsApp</span><span class="r">Reserve</span></div>
@@ -97,11 +101,11 @@
   <div class="ph-wrap"><div class="ph"><div class="scr p2">
     <div class="island"></div>
     <div class="sb"><span>21:30</span><span>●●● ▮</span></div>
-    <div class="imgbox"><img src="assets/img/openhall-wide.jpg" alt=""><div class="sky"></div><svg id="nightLights" viewBox="0 0 1600 1200" preserveAspectRatio="none"></svg></div>
-    <div class="mnav"><div class="brand"><svg viewBox="0 0 84 48" fill="none" stroke="#C8A76B" stroke-width="2.4" stroke-linecap="round"><path d="M2 34 C14 30 22 12 34 12 C44 12 48 24 54 26 C60 20 64 14 70 14 C76 14 80 22 82 26"/><path d="M10 40 C30 34 54 34 80 38"/><path d="M24 46 C40 42 58 42 72 45"/></svg><span>VILLA HILLS</span></div><div class="burger"></div></div>
+    <img class="bg2" src="assets/img/night-sparklers.jpg" alt=""><div class="shade2"></div>
+    <div class="mnav"><div class="brand"><img src="assets/img/logo.png" alt="Villa Hills" style="height:92px;width:auto;display:block"></div><div class="burger"></div></div>
     <div class="tl"><i></i></div>
     <div class="tlt"><span>17:00</span><b>21:30 · First dance</b><span>00:00</span></div>
-    <div class="mcard"><div class="eyebrow">The Open Hall</div><h2 class="display">The lights<br><em>come on</em></h2><p>Scroll with your thumb and the evening moves on: sunset, string lights, the first dance.</p></div>
+    <div class="mcard"><div class="eyebrow">The Open Hall</div><h2 class="display">The lights<br><em>come on</em></h2><p>Scroll with your thumb and the evening moves on, from afternoon to the first dance.</p></div>
     <div class="mbar"><span><i>✆</i>Call</span><span><i>◉</i>WhatsApp</span><span class="r">Reserve</span></div>
   </div></div><div class="ph-cap"><b>Open Hall</b> · day to night with your thumb</div></div>
 
@@ -110,28 +114,14 @@
     <div class="island"></div>
     <div class="sb"><span>18:10</span><span>●●● ▮</span></div>
     <img class="bg" src="assets/img/couple-garden.jpg" alt=""><div class="shade"></div>
-    <svg class="petals" id="petals" viewBox="0 0 390 844"></svg>
-    <div class="bars"><i><b style="width:58%"></b></i><i></i><i></i><i></i></div>
-    <div class="who"><span class="av"><svg viewBox="0 0 84 48" fill="none" stroke="#C8A76B" stroke-width="3" stroke-linecap="round"><path d="M2 34 C14 30 22 12 34 12 C44 12 48 24 54 26 C60 20 64 14 70 14 C76 14 80 22 82 26"/><path d="M10 40 C30 34 54 34 80 38"/></svg></span><span>Weddings <small>· Villa Hills</small></span><span class="x">×</span></div>
+        <div class="bars"><i><b style="width:58%"></b></i><i></i><i></i><i></i></div>
+    <div class="who"><span class="av"><img src="assets/img/logo.png" alt="Villa Hills" style="width:30px;height:auto"></span><span>Weddings</span><span class="x">×</span></div>
     <div class="copy"><div class="eyebrow">Celebrations · 1 of 4</div><h2 class="display">Your dream <em>wedding</em></h2><span class="hy">Հարսանիք</span></div>
     <div class="swipe"><i></i>Swipe up to see the hall</div>
   </div></div><div class="ph-cap"><b>Celebrations</b> · swipe like stories</div></div>
 </div>
 
 <script src="app.js"></script>
-<script>
-  (function () {
-    const s = document.getElementById("petals"), NS = "http://www.w3.org/2000/svg";
-    let seed = 9; const r = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
-    for (let k = 0; k < 22; k++) {
-      const g = document.createElementNS(NS, "g");
-      g.setAttribute("transform", `translate(${r() * 390} ${120 + r() * 600}) rotate(${r() * 180})`);
-      g.setAttribute("opacity", (.55 + r() * .4).toFixed(2));
-      const e = document.createElementNS(NS, "ellipse");
-      e.setAttribute("rx", 5 + r() * 4); e.setAttribute("ry", 3); e.setAttribute("fill", ["#f6d7da", "#fff4f2", "#e9b3ba"][k % 3]);
-      g.appendChild(e); s.appendChild(g);
-    }
-  })();
-</script>
+
 </body>
 </html>

@@ -18,6 +18,11 @@ Why this works:
 
 ---
 
+## GROUND RULES
+
+- **Real photos only.** Every photo is a real Villa Hills photo, shown as it is. We never paint in skies, lights, snow, fireworks or steam, and we never recolour a photo to fake a time of day or a season. If a moment has no real photo yet, it gets filmed or photographed. Until then, it waits as a clearly marked placeholder.
+- **The logo is used whole.** The brand always appears as the complete original logo. We never pull out parts of it (such as the hill lines). Wherever "Villa Hills" appears as text, it must be set in the logo's own typeface. *That font file is still needed from the logo designer;* until it arrives, we show the logo image instead of typing the name.
+
 ## BRAND LOOK & FEEL
 
 - **Tagline:** "Natural & Luxurious" / «Բնական և շքեղ»
@@ -36,9 +41,8 @@ Why this works:
 
 ## SCENE 00 — PRELOADER: "The Sun Rises"
 
-- Black screen. A single gold line draws itself across the screen in the shape of the hills, then turns into the Villa Hills logo.
-- A small sun rises behind the line while a counter runs from 0 to 100.
-- At 100 the hill line splits open like a curtain, and the hero video appears through the gap.
+- Black screen. The full Villa Hills logo fades in, softly lit, while a counter runs from 0 to 100.
+- At 100 the dark panels slide apart like a curtain, and the hero video appears through the gap.
 - Returning visitors get a 1-second version.
 
 ---
@@ -60,8 +64,8 @@ Why this works:
 This is the longest and most important section: a pinned scroll scene about 4–5 screens tall.
 
 ### Part A — "Day to Night" scroll sequence
-- One fixed camera angle on the Open Hall. As you scroll, the frame moves from **day → golden hour → blue hour → night**: timelapse frames scrubbed by scroll, the way Apple product pages work.
-- Tree shadows travel across the floor. At blue hour the string lights switch on one bulb at a time, candles flicker on the tables, and at night fireflies (particles) drift through the garden.
+- One fixed camera angle on the Open Hall. As you scroll, the frame moves from **day → golden hour → blue hour → night**: **real timelapse footage** (to be filmed) scrubbed by scroll, the way Apple product pages work.
+- Until that timelapse is filmed, the section crossfades between real Open Hall photos taken at different times of day (afternoon, sunset, night).
 - The clock HUD runs 17:00 → 21:00.
 - Text cards slide in beside the image:
   - **Up to 350 guests** (the number counts up from 0)
@@ -92,9 +96,8 @@ This is the longest and most important section: a pinned scroll scene about 4–
 
 Built on your own line: *the feeling of summer stays here in every season.*
 
-- **Signature interaction, the seasons slider:** drag across a panoramic shot of the hall. Outside the glass the world changes (snow falling, autumn leaves, spring blossom, summer green) while inside the hall stays warm and golden.
-- **Glass effect:** hovering over the windows sweeps light glints across the glass with a refraction shader.
-- **Panorama:** the section scrolls sideways to show the mountains on all sides.
+- **Panorama:** the section scrolls sideways through real photos of the Glazed Hall: evening, side view, daytime.
+- **Seasons slider (needs real photos):** once the hall has been photographed from one fixed spot in each season, a slider moves between those real photos to show summer kept inside while the seasons change outside.
 - **Up to 120 guests**, intimate and year-round.
 
 ---
@@ -102,7 +105,7 @@ Built on your own line: *the feeling of summer stays here in every season.*
 ## SCENE 04 — THE CLOSED HALL: "Coming soon"
 
 - A dark wall with one tall door. Light leaks through the gaps and pulses slowly.
-- The cursor becomes a flashlight mask. Moving it reveals blurred glimpses of what's behind the door (renders or progress photos).
+- The cursor becomes a flashlight. Until real photos of the new hall exist, it reveals only the words "Opening soon"; later it can reveal real progress photos.
 - **"Be the first to see it"** joins a WhatsApp or email waitlist.
 
 ---
@@ -112,11 +115,7 @@ Built on your own line: *the feeling of summer stays here in every season.*
 The four occasions from your current site: **Weddings · Engagements · Birthdays · Holy Baptism.**
 
 - Four tall cards fanned out like invitation cards. On hover a card lifts and tilts in 3D toward the cursor, and its gold-foil edge catches the light.
-- Each card has its own micro-animation:
-  - **Wedding:** rose petals drift down over the card
-  - **Engagement:** two gold rings slide together and *click*
-  - **Birthday:** candles light up and sparklers fizz
-  - **Holy Baptism:** soft white light, calm and respectful, with no flashy effects
+- Each card shows a real photo from that type of celebration at Villa Hills. *Real engagement, birthday and baptism photos are still needed;* until then those cards show the logo as a placeholder.
 - **Click:** the card expands to fill the screen and becomes that occasion's page, with real event photos, what's included and the recommended hall.
 
 ---
@@ -124,10 +123,9 @@ The four occasions from your current site: **Weddings · Engagements · Birthday
 ## SCENE 06 — THE KITCHEN: "A rich menu"
 
 - A dark, moody macro food film with dishes in slow motion.
-- **Scroll-assemble:** ingredients float in from the edges and assemble into the plated dish as you scroll. Scroll back up and they float apart again.
-- **Hover a dish:** steam rises (WebGL smoke), and the name and description fade in.
-- **360° plate:** drag a dish to rotate it.
-- **Banquet menu:** an elegant interactive menu, by category. *(Needs your real menu.)*
+- Real dish photos, whole and unedited, come to the table as you scroll.
+- **Hover a dish:** its real name and description fade in. *(Needs your real menu.)*
+- **360° plate:** drag a dish to rotate it. *(Needs a real 360° turntable shoot of each dish.)*
 
 ---
 
@@ -160,8 +158,8 @@ The seven services from your current site, shown as a stage under spotlights. Ho
 
 ## SCENE 09 — MIDNIGHT: the finale
 
-- The clock reaches **00:00**. The screen shows the Open Hall at night, and fireworks burst over the garden.
-- **Tap anywhere to launch your own firework.** On Android phones each burst gives a light vibration.
+- The clock reaches **00:00** on a real photo or video of Villa Hills' aerial fireworks.
+- **Tap anywhere to launch your own firework.** This is a light effect drawn on the screen, never painted into a photo. On Android phones each burst gives a light vibration.
 - Line: *"Every story deserves a finale."*
 - CTA: **Reserve your date**
 
@@ -169,7 +167,7 @@ The seven services from your current site, shown as a stage under spotlights. Ho
 
 ## SCENE 10 — LOCATION: "5 km from Yerevan. A world away."
 
-- **Animated 3D map:** a gold line draws the road from central Yerevan to Ptghni, and the camera flies along it and lands on Villa Hills.
+- **Real map:** a gold line draws the real road route on an OpenStreetMap/Mapbox map, from Republic Square to Ptghni (about 16 km, ~22 min), and lands on Villa Hills' exact pin. *(Exact pin still needed.)*
 - Buttons: Google Maps · Yandex Go · Waze.
 - *Optional story:* Ptghni's heritage. The early-medieval Ptghnavank basilica in the village makes a beautiful photo backdrop for couples.
 
@@ -185,13 +183,13 @@ Not a plain form: five steps, one question per screen, with a live summary card 
 4. **Hall and add-ons:** the hall plus services from Scene 07, and the floor plan from Scene 02 if one was made.
 5. **Your contacts:** sent by WhatsApp, Viber, Telegram, phone call or email.
 
-- **On submit:** a gold wax seal stamps onto an envelope, and the envelope flies away. *"Thank you. Our team will contact you."*
+- **On submit:** a seal carrying the full logo stamps onto an envelope, and the envelope flies away. *"Thank you. Our team will contact you."*
 
 ---
 
 ## SCENE 12 — FOOTER
 
-- A giant **VILLA HILLS** wordmark across the screen. The letters near the cursor swell (variable font weight).
+- The full Villa Hills logo, large and centred.
 - **+374 33 34 34 32 · +374 41 34 34 32 · villahillscomplex@gmail.com · Ptghni, 5 km from Yerevan**
 - Instagram · Facebook · YouTube
 - **"Watch the sunrise":** the back-to-top button scrolls up while the sky goes from night to dawn.
@@ -248,12 +246,13 @@ Not a plain form: five steps, one question per screen, with a live summary card 
 1. **Locked-off timelapse** of the Open Hall from one angle, 16:00 → midnight, during a real event or a staged setup. This powers the signature scroll scene.
 2. **Drone flythrough** at golden hour (hero video)
 3. **3D capture** of the Open Hall (drone plus photos for the Gaussian splat) and 360° photos
-4. **Glazed Hall** from one fixed angle (we can simulate the seasons outside the glass)
+4. **Glazed Hall** photographed from one fixed spot in every season (winter, spring, summer, autumn)
 5. **Macro food footage** of 5–8 signature dishes, plus the real menu
 6. **30–60 seconds of audio** of your live band
 7. **Real event photos and videos** (with clients' permission) and real reviews
 8. **Closed Hall** renders or progress photos, and the planned opening date
 9. Exact map pin, working hours, and any packages or prices you want to show
+10. **The logo's font file** (from the logo designer), so every "Villa Hills" text matches the logo exactly
 
 ---
 
@@ -261,7 +260,7 @@ Not a plain form: five steps, one question per screen, with a live summary card 
 
 1. **Scrolling turns day into night over the Open Hall**
 2. **Walking through a photoreal 3D Open Hall in the browser**
-3. **The seasons changing outside the Glazed Hall's glass**
+3. **The seasons changing outside the Glazed Hall's glass** (from real seasonal photos)
 4. **A floor plan that fills with tables as you choose your guest count**
 5. **The Golden Hour date picker, and midnight fireworks you launch yourself**
 
