@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Hills — Hero: The Real Hills</title>
+<link rel="stylesheet" href="hero.css">
+</head>
+<body>
+<!--
+  Hero concept "The Real Hills":
+  The hills are drawn from real satellite elevation data around Ptghni (AWS Terrain Tiles / SRTM),
+  rendered as gold contour lines. No photo is edited; the logo is always the complete original file.
+-->
+<canvas id="gl"></canvas>
+<div class="vignette"></div>
+
+<header class="nav">
+  <img class="nav-logo" id="navLogo" src="../assets/img/logo.png" alt="Villa Hills">
+  <nav class="nav-links"><a>Open Hall</a><a>Glazed Hall</a><a>Celebrations</a><a>Kitchen</a><a>Gallery</a></nav>
+  <div class="nav-right"><div class="lang"><i>ՀԱՅ</i><b>EN</b><i>РУ</i></div><a class="btn">Reserve your date</a></div>
+</header>
+
+<div class="intro" id="intro">
+  <img class="hero-logo" id="heroLogo" src="../assets/img/logo.png" alt="Villa Hills">
+  <h1 class="headline" id="headline"><span>Natural.</span> <em class="foil">Luxurious.</em></h1>
+  <div class="hy" id="hy">Բնական և շքեղ</div>
+</div>
+
+<div class="marker-label" id="mkLabel"><b>Ptghni</b><span id="mkElev">1,324 m</span></div>
+<div class="city-label" id="cityLabel">Yerevan</div>
+<div class="hover-tag" id="hoverTag">1,400 m</div>
+
+<div class="corner bl" id="coords">
+  <div class="k">You are here</div>
+  <div class="v">40.2555° N · 44.5831° E</div>
+  <div class="k2" id="clock">Ptghni</div>
+</div>
+<div class="corner br" id="source">The real hills around Ptghni,<br>drawn from satellite elevation data · heights ×3</div>
+<div class="scroll-cue" id="cue">Scroll · fly into the Open Hall<i></i></div>
+
+<div class="arch" id="arch"><img id="archImg" src="../assets/img/openhall-wide.jpg" alt=""></div>
+<div class="oh-shade" id="ohShade"></div>
+<div class="oh" id="oh">
+  <div class="eyebrow">Chapter I<span class="dot"></span>The Open Hall</div>
+  <h2>Under one <em>open sky</em></h2>
+  <p><b>350</b> guests, up to</p>
+</div>
+
+<div class="cursor" id="cursor"></div>
+
+<script type="module" src="hero.js"></script>
+</body>
+</html>
