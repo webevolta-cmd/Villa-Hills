@@ -206,7 +206,7 @@
   (function () {
     const wrap = $("#cards"); if (!wrap) return;
     const data = [
-      ["Weddings", "Հարսանիք", "01", "couple-garden.jpg", -6, 40, true],
+      ["Weddings", "Հարսանիք", "01", "open-hall/oh-07.jpg", -6, 40, true],
       ["Engagements", "Նշանադրություն", "02", null, -2, 8, false, "engagement"],
       ["Birthdays", "Ծննդյան տոն", "03", null, 2, 8, false, "birthday"],
       ["Holy Baptism", "Սուրբ Մկրտություն", "04", null, 6, 40, false, "baptism"],
@@ -217,7 +217,7 @@
       c.style.left = lefts[i] + "px"; c.style.top = "0";
       c.style.transform = d[6] ? `translateY(-34px) rotate(-2deg) rotateY(9deg) rotateX(4deg) scale(1.06)` : `translateY(${d[5]}px) rotate(${d[4]}deg)`;
       const ph = d[3]
-        ? `<div class="ph"><img src="assets/img/${d[3]}" alt=""></div>`
+        ? `<div class="ph"><img src="assets/img/${d[3]}" alt="" style="object-position:68% 50%"></div>`
         : `<div class="ph placeholder"><img src="assets/img/logo.png" alt="Villa Hills"><small>Your real ${d[7]} photos<br>go here</small></div>`;
       c.innerHTML = `${ph}<div class="cap"><div><h4>${d[0]}</h4><small>${d[1]}</small></div><span>${d[2]}</span></div>`;
       wrap.appendChild(c);
@@ -259,7 +259,7 @@
   /* ---------------- gallery canvas ---------------- */
   (function () {
     const w = $("#galWorld"); if (!w) return;
-    const imgs = ["couple-garden", "openhall-trees", "night-sparklers", "dish-shrimp", "glazed-dome-dusk", "head-table-flowers", "couple-car", "cake-floral", "garden-ceremony", "string-quartet", "red-hearts", "sunset-table", "fireworks-bride", "canopy-flowers", "couple-dip", "terrace-arches", "purple-setup", "drone-garden", "ring-arch-table", "helicopter", "table-mountains", "couple-red-stairs", "canopy-white-flowers", "dish-mussels", "openhall-tree-hall", "entrance-gate", "wall-lights", "villa-tree", "feast-mountains", "garden-arch-white", "cake-gold", "head-table-stairs", "glazed-dome-sunset", "openhall-trees-decor", "table-flowers", "dish-rice"];
+    const imgs = ["open-hall/oh-01.webp", "glazed-dome-dusk.jpg", "open-hall/oh-07.jpg", "dish-shrimp.jpg", "open-hall/oh-05.jpg", "canopy-white-flowers.jpg", "open-hall/oh-03.webp", "glazed-dome-day.jpg", "open-hall/oh-09.jpg", "cake-floral.jpg", "open-hall/oh-08.jpg", "dish-mussels.jpg", "open-hall/oh-02.webp", "dome-inside-tall.jpg", "open-hall/oh-06.jpg", "canopy-flowers.jpg", "open-hall/oh-10.jpg", "table-flowers.jpg", "open-hall/oh-04.webp", "red-hearts.jpg", "dish-tartare.jpg", "white-setup-tall.jpg", "canopy-seating.jpg", "cake-gold.jpg", "wall-lights.jpg", "openhall-trees-decor.jpg", "dish-rice.jpg"];
     const cols = 8, colW = 230, gap = 26, r = rng(4); let k = 0;
     for (let c = 0; c < cols; c++) {
       let y = -120 - (c % 2) * 140 - r() * 80;
@@ -267,7 +267,7 @@
         const h = [200, 260, 320, 180, 290][Math.floor(r() * 5)];
         const t = document.createElement("div"); t.className = "tile";
         Object.assign(t.style, { left: 40 + c * (colW + gap) + "px", top: y + "px", width: colW + "px", height: h + "px" });
-        t.innerHTML = `<img src="assets/img/${imgs[k++ % imgs.length]}.jpg" alt="">`;
+        t.innerHTML = `<img src="assets/img/${imgs[k++ % imgs.length]}" alt="">`;
         w.appendChild(t); y += h + gap;
       }
     }
